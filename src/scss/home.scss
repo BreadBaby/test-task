@@ -1,0 +1,411 @@
+//====================================================================================================
+.page {
+
+    &__first {
+        @media (min-width:$mobile){
+            display: grid;
+            grid-template-columns: 1fr 0.6fr;
+        }
+    }
+
+    &__second {
+        @media (min-width:$mobile){
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;  
+        }
+    }
+
+    &__third {
+        @media (min-width:$tablet){
+            display: grid;
+            grid-template-columns: 0.6fr 1fr;     
+        }
+    }
+}
+//====================================================================================================
+.first-page {
+
+    &__leftSide {
+    }
+
+    &__image-ibg {
+        padding-bottom: percent(715, 908);
+        height: 100%;
+        img{
+            object-position: left;
+        }
+    }
+
+    &__rightSide {
+        @include adaptiveValue("padding-right", 54, 15);
+        @include adaptiveValue("padding-left", 54, 15);
+        @include adaptiveValue("padding-top", 57, 15);
+        @include adaptiveValue("padding-bottom", 101, 15);
+    }
+
+    &__labels {
+        @include adaptiveValue("margin-top", 74, 15);
+        @include adaptiveValue("margin-bottom", 59, 15);
+        @include adaptiveValue("font-size", 40, 20);
+        line-height: math.div(57 , 40);
+        letter-spacing: 0.03em;
+        h1{
+            font-weight: 700; 
+        }
+        h2{
+            font-weight: 400; 
+        }
+        h3{
+            font-weight: 300; 
+        }
+    }
+
+    &__texts {
+        p:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 15);
+        }
+        font-size: rem(18);
+        line-height: math.div(28 , 18);
+        font-weight: 400;
+        letter-spacing: 0.03em;
+    }
+}
+//====================================================================================================
+.second-page {
+
+    &__leftSide {
+    }
+
+    &__rightSide {
+    }
+}
+.leftSide-secondPage {
+    position: relative;
+    &__content {
+        position: relative;
+        @include adaptiveValue("padding-top", 70, 20);
+        @include adaptiveValue("padding-bottom", 66, 10);
+        @include adaptiveValue("padding-right", 59, 15);
+        @include adaptiveValue("padding-left", 103, 15);
+        z-index: 2;
+        opacity: 0.87;
+        line-height: math.div(28 , 16);
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+    }
+
+    &__block {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 85, 10);
+        }
+    }
+
+    &__label {
+        @include adaptiveValue("margin-bottom", 37, 10);
+        @include adaptiveValue("font-size", 45, 20);
+        line-height: math.div(66 , 45);
+        span{
+            font-weight: 900;
+        }
+    }
+
+    &__pharagraph {
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+}
+.rightSide-secondPage {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    &__up {
+        position: relative;
+        @include adaptiveValue("padding-right", 162, 15);
+        @include adaptiveValue("padding-left", 54, 15);
+        @include adaptiveValue("padding-top", 70, 20);
+        @include adaptiveValue("padding-bottom", 70, 20);
+
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2
+    }
+
+    &__label {
+        @include adaptiveValue("margin-bottom", 37, 15);
+        @include adaptiveValue("font-size", 42, 20);
+        line-height: math.div(66 , 42);
+        &_white {
+            color: #ffffff;
+        }
+    }
+
+    &__pharagraph {
+        @include adaptiveValue("margin-bottom", 53, 25);
+        line-height: math.div(28 , 16);
+        font-weight: 400;
+        &_white {
+            color: #ffffff;
+        }
+    }
+    &__link {
+        display: inline-block;
+        padding: rem(17) rem(40);
+        border-radius: 15px;
+        background-color: rgba(0,0,0,0.0);
+        border: 1px solid #262f32;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.664);
+            transition: all 0.3s ease 0s;
+        }
+        &_white {
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.664);
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+
+    &__down {
+        position: relative;
+        @include adaptiveValue("padding-right", 162, 15);
+        @include adaptiveValue("padding-left", 54, 15);
+        @include adaptiveValue("padding-top", 70, 20);
+        @include adaptiveValue("padding-bottom", 70, 20);
+    }
+}
+//====================================================================================================
+.third-page {
+
+    &__leftSide {
+    }
+
+    &__rightSide {
+    }
+}
+.leftSide-thirdPage {
+    position: relative;
+    &__content {
+        position: relative;
+        z-index: 2;
+        @include adaptiveValue("padding-right", 67, 15);
+        @include adaptiveValue("padding-left", 70, 15);
+        @include adaptiveValue("padding-top", 74, 20);
+        @include adaptiveValue("padding-bottom", 74, 20);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-weight: 300;
+        color: #ffffff;
+    }
+
+    &__label {
+        @include adaptiveValue("margin-bottom", 37, 15);
+        @include adaptiveValue("font-size", 42, 20);
+        line-height: math.div(66 , 42);
+        flex: 1 1 auto;
+        @include adaptiveValue("height",444 , 100 );
+        
+        span{
+            display: block;
+            font-weight: 900;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__image {
+    }
+
+    &__sublabel {
+        @include adaptiveValue("font-size", 42, 20);
+        line-height: math.div(66 , 42);
+        font-weight: 900;
+    }
+
+    &__text {
+        font-weight: 400;
+    }
+    &__img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+}
+.rightSide-thirdPage {
+    position: relative;
+    opacity: 0.8;
+    &__content {
+        position: relative;
+        z-index: 2;
+        @include adaptiveValue("padding-top", 74, 20);
+        @include adaptiveValue("padding-bottom", 74, 20);
+        @include adaptiveValue("padding-left", 57, 20);
+        @include adaptiveValue("padding-right", 57, 20);
+        color: #ffffff;
+    }
+
+    &__label {
+        @include adaptiveValue("font-size", 42, 20);
+        line-height: math.div(66 , 42);
+        font-weight: 300;
+        letter-spacing: 0.03em;
+        span{
+            font-weight: 900;
+        }
+        
+    }
+
+    &__form {
+        @include adaptiveValue("margin-top", 49, 15);
+        @include adaptiveValue("margin-bottom", 94, 20);
+        @include adaptiveValue("width", 619, 200);
+        @media (max-width:$tablet){
+            width: 100%;
+        }
+    }
+
+    &__inputWrapper {
+        display: flex;
+        gap: 13px;
+        margin-bottom: 13px;
+
+    }
+
+    &__input {
+        width: 100%;
+        padding: 21px 0 21px 28px;
+        border-radius: 8px;
+        background-color: rgba(0,0,0,0.0);
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        &::placeholder{
+            color: #ffffff;
+        }
+    }
+
+    &__area {
+        width: 100%;
+        padding: 21px 0 0 28px;
+        border-radius: 8px;
+        background-color: rgba(0,0,0,0.0);
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        &::placeholder{
+            color: #ffffff;
+        }
+    }
+
+    &__text {
+        line-height: math.div(32 , 16);
+        font-weight: 400;
+    }
+
+    &__links {
+        @include adaptiveValue("margin-top", 22, 15);
+        @include adaptiveValue("margin-bottom", 49, 20);
+        display: flex;
+        font-size: rem(45);
+        &:not(:last-child) {
+            gap: 0 16px;
+        }
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+}
+.links {
+
+    &__facebook {
+        color: #345bb4;
+    }
+
+    &__basketball {
+        background-color: #e64895;
+        border-radius: 8px;
+        color: #ffffff;
+    }
+
+    &__twitter {
+        color: #00b4ff;
+    }
+}
+
+.icon-menu {
+
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	
+}
+//====================================================================================================
